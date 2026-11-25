@@ -1,0 +1,16 @@
+[project]
+name = "retirement"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "finalex-database",
+    "boto3>=1.40.9",
+    "litellm>=1.76.3",
+    "mlflow>=3.3.2",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.1.1",
+    "tenacity>=9.1.2",
+]
+
+[tool.uv.sources]
+finalex-database = { path = "../database", editable = true }

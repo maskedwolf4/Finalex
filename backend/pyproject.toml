@@ -1,0 +1,21 @@
+[project]
+name = "backend"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "finalex-database",
+    "boto3>=1.40.29",
+    "litellm>=1.76.3",
+    "mlflow>=3.3.2",
+    "python-dotenv>=1.1.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "database",
+    "api",
+    "scheduler",
+]
+
+[tool.uv.sources]
+finalex-database = { workspace = true }
